@@ -10,6 +10,12 @@ import hello.proxy.trace.logtrace.LogTrace;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 인터페이스 기반 프록시 vs 클래스 기반 프록시
+ * 인터페이스 도입은 구현을 변경할 일이 있을 떄 사용한다.
+ * 구현을 변경하지 않는 클래스에서의 인터페이스 도입은 실용적이지 않다.
+ */
+
 @Configuration
 public class ConcreteProxyConfig {
 
