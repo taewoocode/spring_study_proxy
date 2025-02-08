@@ -19,6 +19,9 @@ public class DynamicProxyBasicConfig {
      */
     @Bean
     public OrderControllerV1 orderControllerV1(LogTrace logTrace) {
+        /**
+         * OrderControllerImpl은 내부에 orderService를 참조하고 있다.
+         */
         OrderControllerV1 orderControllerV1 = new OrderControllerV1Impl(orderServiceV1(logTrace));
         OrderControllerV1 proxy = (OrderControllerV1)
                 Proxy.newProxyInstance(OrderControllerV1.class.getClassLoader(),
